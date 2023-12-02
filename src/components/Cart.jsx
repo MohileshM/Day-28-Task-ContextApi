@@ -4,7 +4,7 @@ import SingleProduct from "./SingleProduct";
 
 const Cart = () => {
   const { cart } = useContext(CartContext);
-  // Create a state to track the count for each product in the cart
+ 
   const [productCounts, setProductCounts] = useState(
     cart.reduce((counts, product) => {
       counts[product.id] = 1; // Default count for each product is 1
@@ -12,7 +12,6 @@ const Cart = () => {
     }, {})
   );
 
-  // Function to update the count for a specific product
   const updateProductCount = (productId, newCount) => {
     setProductCounts((prevCounts) => ({
       ...prevCounts,
