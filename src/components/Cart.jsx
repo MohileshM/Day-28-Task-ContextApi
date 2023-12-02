@@ -7,7 +7,7 @@ const Cart = () => {
  
   const [productCounts, setProductCounts] = useState(
     cart.reduce((counts, product) => {
-      counts[product.id] = 1; // Default count for each product is 1
+      counts[product.id] = 1;
       return counts;
     }, {})
   );
